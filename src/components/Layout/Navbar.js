@@ -72,51 +72,53 @@ function Navbar({ setMobileView, mobile_view }) {
   }, []);
 
   return (
-    <div className={`flex justify-between py-2`}>
-      {!loading ? (
-        <>
-          <Link href={"/"} className="p-2">
-            <span className="ml-[1rem] flex items-center">
-              <h2
-                className='logo-text'
-              >Suva Kantipur</h2>
-            </span>
-          </Link>
+    <div className=" relative">
+      <div className={`flex justify-between py-2`}>
+        {!loading ? (
+          <>
+            <Link href={"/"} className="p-2">
+              <span className="ml-[1rem] flex items-center">
+                <h2
+                  className='logo-text'
+                >Suva Kantipur</h2>
+              </span>
+            </Link>
 
-          {!mobile_view ? (
-            <>
-              <div className="flex mb-6 items-end max-w-[22rem]">
-                <NavbarItems mobile_view={mobile_view} />
-              </div>
-              <div className="shrink pt-3">
-                <div className="text-center flex justify-center mr-[3rem]">
-                  <FaCartArrowDown/>
+            {!mobile_view ? (
+              <>
+                <div className="flex mb-6 items-end max-w-[22rem]">
+                  <NavbarItems mobile_view={mobile_view} />
                 </div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div
-                className="justify-self-end px-6 py-3"
-                onClick={handleMobileNavbar}
-              >
-                <GiHamburgerMenu className="text-4xl" />
-              </div>
-            </>
-          )}
-        </>
-      ) : (
-        <></>
-      )}
-      {mobile_navbar ? (
-        <div
-          className={`text-black flex flex-col mt-[5rem] px-[1rem] pt-[1.1rem] pb-[1rem] absolute w-full bg-white z-[60] rounded-[1.5rem]`}
-        >
-          <NavbarItems mobile_view={mobile_view} />
-        </div>
-      ) : (
-        <></>
-      )}
+                <div className="shrink pt-3">
+                  <div className="text-center flex justify-center mr-[3rem]">
+                    <FaCartArrowDown/>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div
+                  className="justify-self-end px-6 py-3"
+                  onClick={handleMobileNavbar}
+                >
+                  <GiHamburgerMenu className="text-4xl" />
+                </div>
+              </>
+            )}
+          </>
+        ) : (
+          <></>
+        )}
+        {mobile_navbar ? (
+          <div
+            className={`text-black flex flex-col mt-[5rem] px-[1rem] pt-[1.1rem] pb-[1rem] absolute w-full bg-white z-[60] rounded-[1.5rem]`}
+          >
+            <NavbarItems mobile_view={mobile_view} />
+          </div>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 }
