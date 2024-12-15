@@ -1,0 +1,73 @@
+.bg-primary{
+    background-color: #2273cd;
+}
+.bg-secondary{
+    background-color: #464646;
+}
+.bg-yellow-custom{
+    background-color: #ffdf34;
+}
+.bg-card-roadmap{
+    background: rgb(29,29,29);
+    background: linear-gradient(90deg, rgba(29,29,29,1) 12%, rgba(70,70,70,1) 70%);
+}
+
+
+h5{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+h4{
+    font-size: 1rem;
+}
+h3{
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+input{
+    padding: 0.5rem 1.2rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #242424 ;
+}
+
+.border-bottom-2{
+    border-bottom: 2px solid #f3f4f6  ;
+}
+.active{
+    color: purple;
+}
+
+.accordion-span{
+    span{
+        display: none;
+    }
+}
+
+// Mobile View Tailwind
+@media (max-width: 768px) {
+    h3{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    .tablet-view{
+        flex-direction: column;
+    }
+  }
