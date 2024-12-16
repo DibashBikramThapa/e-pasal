@@ -12,31 +12,25 @@ const NavbarItems = ({ mobile_view = false }) => {
           : "flex-row text-[1.2rem]"
       }`}
     >
-      <Link href={"/"} className="">
+      <Link href={"/"} className="e-button">
         <h3
-          className={`px-[1.2rem] ${
-            mobile_view ? "border-bottom-2" : "translate-up"
-          } font-sans`}
+          className={`px-[1.2rem] py-1 sm:py-4 font-sans`}
         >
           Home
         </h3>
       </Link>
-      <Link href={"/#about"} className="">
+      <Link href={"/#about"} className="e-button">
         <h3
-          className={`px-[1.2rem] ${
-            mobile_view ? "border-bottom-2" : "translate-up"
-          } font-sans`}
+          className={`px-[1.2rem] py-1 sm:py-4 font-sans`}
         >
           About
         </h3>
       </Link>
-      <Link href={"/#contact"} className="">
+      <Link href={"/#contactus"} className="e-button">
         <h3
-          className={`px-[1.2rem] ${
-            mobile_view ? "border-bottom-2" : "translate-up"
-          } font-sans`}
+          className={`px-[1.2rem] py-1 sm:py-4 font-sans`}
         >
-          Contact
+          Contact Us
         </h3>
       </Link>
     </div>
@@ -72,8 +66,8 @@ function Navbar({ setMobileView, mobile_view }) {
   }, []);
 
   return (
-    <div className=" relative">
-      <div className={`flex justify-between py-2`}>
+    <div className="fixed z-50 bg-white w-full py-2 navbar">
+      <div className={`flex justify-between`}>
         {!loading ? (
           <>
             <Link href={"/"} className="p-2">
@@ -86,7 +80,7 @@ function Navbar({ setMobileView, mobile_view }) {
 
             {!mobile_view ? (
               <>
-                <div className="flex mb-6 items-end max-w-[22rem]">
+                <div className="flex items-end max-w-[22rem]">
                   <NavbarItems mobile_view={mobile_view} />
                 </div>
                 <div className="shrink pt-3">

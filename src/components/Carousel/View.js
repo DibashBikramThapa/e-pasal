@@ -26,7 +26,7 @@ function View({images, mobile_view}) {
             {
                 images.map((each, index) =>{
                     return(
-                        <img key={index} src={each.source} className={`object-cover ${mobile_view? 'h-full w-full' : 'h-[35rem] w-full'}`} alt="..."/>
+                        <img key={index} src={each.source} className={`object-cover ${mobile_view? 'h-full w-full' : 'h-[40rem] w-full'}`} alt="..."/>
                     )
                 })
             }

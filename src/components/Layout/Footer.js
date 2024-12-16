@@ -8,7 +8,7 @@ import { FaDiscord } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="mt-32  bg-black text-white">
+    <div className="mt-32 bg-black text-white">
       <div className="grid md:grid-cols-2 mx-2 sm:mx-[5rem]">
         <div className="mt-6 flex flex-col gap-5">
           {/* <img alt="Image not found" src={`/logo.png`} className="w-[15rem]" /> */}
@@ -63,7 +63,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-16 font-[100]">
+      <div className="mt-16 font-[100] px-2">
         2024, All Rights Reserved!
       </div>
     </div>

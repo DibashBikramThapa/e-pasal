@@ -11,7 +11,7 @@ export default function Layout({ setMobileView, mobile_view, children }) {
   return (
     <div className="px-2">
       <Navbar setMobileView={setMobileView1} mobile_view={mobile_view} />
-      <main id="popup">
+      <main id="popup" className="mt-[5rem]">
         {children}
         </main>
       <Footer mobile_view={mobile_view} />
